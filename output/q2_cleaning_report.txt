@@ -1,0 +1,77 @@
+DATA CLEANING REPORT
+====================
+
+Rows before cleaning: 196453
+
+Missing Data Handling:
+- Air Temperature: 75 missing values before, 0 after cleaning
+  Method: forward-fill, then median imputation
+  Result: 75 values filled
+
+- Wet Bulb Temperature: 76017 missing values before, 0 after cleaning
+  Method: forward-fill, then median imputation
+  Result: 76017 values filled
+
+- Rain Intensity: 76017 missing values before, 0 after cleaning
+  Method: forward-fill, then median imputation
+  Result: 76017 values filled
+
+- Total Rain: 76017 missing values before, 0 after cleaning
+  Method: forward-fill, then median imputation
+  Result: 76017 values filled
+
+- Precipitation Type: 76017 missing values before, 0 after cleaning
+  Method: forward-fill, then median imputation
+  Result: 76017 values filled
+
+- Barometric Pressure: 146 missing values before, 0 after cleaning
+  Method: forward-fill, then median imputation
+  Result: 146 values filled
+
+- Heading: 76017 missing values before, 0 after cleaning
+  Method: forward-fill, then median imputation
+  Result: 76017 values filled
+
+Outlier Handling:
+- Total Rain: Detected 4537 outliers using 3*IQR
+  Method: capped using 3*IQR
+  Bounds: [-496.500, 699.100]
+  Result: 4537 values capped
+
+- Wind Speed: Detected 2574 outliers using 3*IQR
+  Method: capped using 3*IQR
+  Bounds: [-3.500, 8.400]
+  Result: 2574 values capped
+
+- Maximum Wind Speed: Detected 220 outliers using 3*IQR
+  Method: capped using 3*IQR
+  Bounds: [-10.800, 17.200]
+  Result: 220 values capped
+
+- Barometric Pressure: Detected 106 outliers using 3*IQR
+  Method: capped using 3*IQR
+  Bounds: [965.000, 1023.800]
+  Result: 106 values capped
+
+- Solar Radiation: Detected 17195 outliers using 3*IQR
+  Method: capped using 3*IQR
+  Bounds: [-393.000, 524.000]
+  Result: 17195 values capped
+
+- Heading: Detected 41325 outliers using 3*IQR
+  Method: capped using 3*IQR
+  Bounds: [333.000, 375.000]
+  Result: 41325 values capped
+
+- Battery Life: Detected 6 outliers using 3*IQR
+  Method: capped using 3*IQR
+  Bounds: [2.300, 24.700]
+  Result: 6 values capped
+
+Duplicates Removed: 0
+
+Data Type Conversions:
+- Measurement Timestamp: Converted to datetime64[ns]
+- Measurement Timestamp Label: Converted to datetime64[ns]
+
+Rows after cleaning: 196453
